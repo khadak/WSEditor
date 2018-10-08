@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Editor</title>
+</head>
+<body>
+<header id="header"><h1>WSYG Editor</h1></header>	
+<div class="page-wrapper">
+	<div class="editor">
+		<h2>Editor</h2>	
+		<div class="editor__wrap">
+			<button class="btn btn__bold" onclick="document.execCommand('bold', false, '')">
+				<i class="fa fa-bold" aria-hidden="true"></i>
+			</button>
+			<button class="btn btn__italic" onclick="document.execCommand('italic', false, '')">
+				<i class="fa fa-italic" aria-hidden="true"></i>
+			</button>
+			<button class="btn btn__underline" onclick="document.execCommand('underline', false, '')">
+				<i class="fa fa-underline" aria-hidden="true"></i>
+			</button>
+			<button class="btn btn__link">
+				<i class="fa fa-link" aria-hidden="true"></i>
+			</button>
+			<div class="btn" style="position: relative;">
+				<input type="file" accept="image/*" id="imageUpload" style="position: absolute;width: 100%;left: 0;top: 0;height: 50px; opacity: 0; cursor: pointer;">
+
+    			<label for="imageUpload" class="fa fa-file-image-o"></label>
+    		</div>
+
+			<div class="emoji">
+				<div class="emojiE" data-emoji="0x1F607">&#x1F607;</div>
+				<div class="emojiE" data-emoji="0x1F604">&#x1F604;</div>
+				
+				<div class="emojiE" data-emoji="0x1F61C">&#x1F61C;</div>
+				<div class="emojiE" data-emoji="0x1F620">&#x1F620;</div>
+			</div>
+		</div>
+		
+		<div class="content content__editor" contenteditable></div>
+		<div class="btn-wrap">
+			<button class="btn btn--preview">Preview</button>
+			<button class="btn btn--save">Save</button>
+		</div>
+
+	</div>
+	<div class="output">
+		<h2>Output</h2>
+		<div class="content__preview"></div>
+		<div class="content__save">
+			<div class="content__html"></div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
